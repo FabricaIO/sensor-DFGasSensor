@@ -22,12 +22,12 @@
 #include <Sensor.h>
 
 class DFGasSensor: public Sensor {
-	public:        
+	protected:        
 		DFGasSensor(int I2CAddress);
 		bool begin();
 		bool takeMeasurement();
 
-	private:
+	protected:
 		/// @brief I2C address of gas sensor sensor
 		int GAS_I2C_ADDRESS;
 
