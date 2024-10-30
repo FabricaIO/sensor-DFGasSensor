@@ -22,7 +22,7 @@
 #include <Sensor.h>
 
 class DFGasSensor: public Sensor {
-	protected:        
+	public:        
 		DFGasSensor(int I2CAddress);
 		bool begin();
 		bool takeMeasurement();
