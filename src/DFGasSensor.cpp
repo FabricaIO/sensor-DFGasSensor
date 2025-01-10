@@ -15,7 +15,6 @@ bool DFGasSensor::begin() {
 	Description.name = "Gas Sensor";
 	Description.parameters = {"Gas"};
 	Description.units = {"ppm"};
-	Description.id = 4;
 	// Start the sensor
 	if (Gas_Sensor.begin()) {
 		if (Gas_Sensor.changeAcquireMode(Gas_Sensor.PASSIVITY)) {
