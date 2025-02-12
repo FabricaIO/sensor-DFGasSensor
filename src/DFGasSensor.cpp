@@ -9,12 +9,12 @@ DFGasSensor::DFGasSensor(int I2CAddress) : Gas_Sensor(&Wire, I2CAddress) {
 /// @brief Starts a gas sensor
 /// @return True on success
 bool DFGasSensor::begin() {
-	values.resize(1);
 	Description.parameterQuantity = 1;
 	Description.type = "Environmental Sensor";
 	Description.name = "Gas Sensor";
 	Description.parameters = {"Gas"};
 	Description.units = {"ppm"};
+	values.resize(Description.parameterQuantity);
 	// Start the sensor
 	if (Gas_Sensor.begin()) {
 		if (Gas_Sensor.changeAcquireMode(Gas_Sensor.PASSIVITY)) {
