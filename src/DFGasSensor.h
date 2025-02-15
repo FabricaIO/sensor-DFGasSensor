@@ -23,7 +23,7 @@
 
 class DFGasSensor: public Sensor {
 	public:        
-		DFGasSensor(int I2CAddress);
+		DFGasSensor(int I2CAddress = 0x74);
 		bool begin();
 		bool takeMeasurement();
 

@@ -1,0 +1,45 @@
+{
+	"name": "Fabrica-IO Sensor DF Robot Gas",
+	"version": "0.5.0",
+	"description": "I2C electrochemical gas senor with a large number of options for target gasses",
+	"keywords": "Fabrica-IO, sensor, gas, i2c",
+	"repository":
+	{
+	  "type": "git",
+	  "url": "https://github.com/FabricaIO/sensor-DFGasSensor.git"
+	},
+	"authors":
+	[
+	  {
+		"name": "Sam Groveman",
+		"email": "SamGroveman@outlook.com",
+		"url": "https://github.com/FabricaIO"
+	  }
+	],
+	"dependencies": {
+		"DFRobot_MultiGasSensor": "https://github.com/DFRobot/DFRobot_MultiGasSensor"
+	  },
+	"license": "GPLv3",
+	"homepage": "https://github.com/FabricaIO",
+	"frameworks": "arduino",
+	"platforms": "*",
+	"fabrica-io" : {
+		"name": "GasSensor",
+		"type": 0,
+		"category": "gas sensor",
+		"libname": "DFGasSensor",
+		"includes": ["DFGasSensor"],
+		"description": "I2C electrochemical gas senor with a large number of options for target gasses",
+		"constructor":
+		[
+			[
+				{
+					"name": "I2CAddress",
+					"type": "int",
+					"description": "The I2C address",
+					"default": "0x74"
+				}
+			]
+		]
+	}
+  }
