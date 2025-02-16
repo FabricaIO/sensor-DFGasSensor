@@ -1,5 +1,5 @@
 {
-	"name": "Fabrica-IO Sensor DF Robot Gas",
+	"name": "sensor-DFGasSensor",
 	"version": "0.5.0",
 	"description": "I2C electrochemical gas senor with a large number of options for target gasses",
 	"keywords": "Fabrica-IO, sensor, gas, i2c",
