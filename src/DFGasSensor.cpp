@@ -22,7 +22,7 @@ bool DFGasSensor::begin() {
 			String GasType = Gas_Sensor.queryGasType();
 			Description.name = GasType + " Sensor";
 			Description.parameters = {GasType};
-			return true;
+			return Sensor::begin();
 		}
 	}
 	return false;
