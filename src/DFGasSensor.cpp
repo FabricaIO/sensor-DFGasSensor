@@ -1,8 +1,9 @@
 #include "DFGasSensor.h"
 
 /// @brief Creates a gas sensor
+/// @param Name The device name
 /// @param I2CAddress The I2C address of the sensor
-DFGasSensor::DFGasSensor(int I2CAddress) : Gas_Sensor(&Wire, I2CAddress) {
+DFGasSensor::DFGasSensor(String Name, int I2CAddress) : Gas_Sensor(&Wire, I2CAddress), Sensor(Name) {
 	GAS_I2C_ADDRESS = I2CAddress;
 }
 
@@ -11,7 +12,6 @@ DFGasSensor::DFGasSensor(int I2CAddress) : Gas_Sensor(&Wire, I2CAddress) {
 bool DFGasSensor::begin() {
 	Description.parameterQuantity = 1;
 	Description.type = "Environmental Sensor";
-	Description.name = "Gas Sensor";
 	Description.parameters = {"Gas"};
 	Description.units = {"ppm"};
 	values.resize(Description.parameterQuantity);
