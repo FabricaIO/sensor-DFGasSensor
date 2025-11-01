@@ -4,7 +4,7 @@
 /// @param Name The device name
 /// @param I2C_bus The I2C bus attached to the sensor
 /// @param I2CAddress The I2C address of the sensor
-DFGasSensor::DFGasSensor(String Name, TwoWire* I2C_bus, int I2CAddress) : Gas_Sensor(&Wire, I2CAddress), Sensor(Name) {
+DFGasSensor::DFGasSensor(String Name, TwoWire* I2C_bus, int I2CAddress) : Gas_Sensor(I2C_bus, I2CAddress), Sensor(Name) {
 	i2c_bus = I2C_bus;
 }
 
@@ -14,7 +14,7 @@ DFGasSensor::DFGasSensor(String Name, TwoWire* I2C_bus, int I2CAddress) : Gas_Se
 /// @param scl SCL pin to use for I2C bus
 /// @param I2C_bus The I2C bus attached to the sensor
 /// @param I2CAddress The I2C address of the sensor
-DFGasSensor::DFGasSensor(String Name, int sda, int scl, TwoWire* I2C_bus, int I2CAddress) : Gas_Sensor(&Wire, I2CAddress), Sensor(Name) {
+DFGasSensor::DFGasSensor(String Name, int sda, int scl, TwoWire* I2C_bus, int I2CAddress) : Gas_Sensor(I2C_bus, I2CAddress), Sensor(Name) {
 	i2c_bus = I2C_bus;
 	scl_pin = scl;
 	sda_pin = sda;
