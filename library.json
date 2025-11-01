@@ -34,8 +34,40 @@
 		[
 			[
 				{
+					"name": "I2C_bus",
+					"type": "TwoWire*",
+					"description": "The I2C bus",
+					"default": "&Wire"
+				},
+				{
 					"name": "I2CAddress",
+					"type": "uint8_t",
+					"description": "The I2C address",
+					"default": "0x74"
+				}
+			],
+			[
+				{
+					"name": "sda",
 					"type": "int",
+					"description": "The SDA pin on the I2C bus",
+					"default": "21"
+				},
+				{
+					"name": "scl",
+					"type": "int",
+					"description": "The SCL pin on the I2C bus",
+					"default": "22"
+				},
+				{
+					"name": "I2C_bus",
+					"type": "TwoWire*",
+					"description": "The I2C bus",
+					"default": "&Wire"
+				},
+				{
+					"name": "I2CAddress",
+					"type": "uint8_t",
 					"description": "The I2C address",
 					"default": "0x74"
 				}

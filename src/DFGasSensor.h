@@ -23,13 +23,20 @@
 
 class DFGasSensor: public Sensor {
 	public:        
-		DFGasSensor(String Name, int I2CAddress = 0x74);
+		DFGasSensor(String Name, TwoWire* I2C_bus = &Wire, int I2CAddress = 0x74);
+		DFGasSensor(String Name, int sda, int scl, TwoWire* I2C_bus = &Wire, int I2CAddress = 0x74);
 		bool begin();
 		bool takeMeasurement();
 
 	protected:
-		/// @brief I2C address of gas sensor sensor
-		int GAS_I2C_ADDRESS;
+		/// @brief I2C bus in use
+		TwoWire* i2c_bus;
+
+		/// @brief SCL pin in use
+		int scl_pin = -1;
+
+		/// @brief SDA pin in use
+		int sda_pin = -1;
 
 		/// @brief Gas sensor object
 		DFRobot_GAS_I2C Gas_Sensor;
