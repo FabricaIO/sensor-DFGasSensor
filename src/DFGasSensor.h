@@ -21,6 +21,7 @@
 #include <Wire.h>
 #include <Sensor.h>
 
+/// @brief Device for controlling the collection of DF Robot I2C gas sensors
 class DFGasSensor: public Sensor {
 	public:        
 		DFGasSensor(String Name, TwoWire* I2C_bus = &Wire, int I2CAddress = 0x74);
