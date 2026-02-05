@@ -10,8 +10,8 @@
 * I2C address select via dip-switch, default to 0x74, A1 and A0 are grouped into 4 I2C addresses.
 *             | A0 | A1 |
 *             | 0  | 0  |    0x74 default I2C address  
-*             | 0  | 1  |    0x75
-*             | 1  | 0  |    0x76
+*             | 1  | 0  |    0x75
+*             | 0  | 1  |    0x76
 *             | 1  | 1  |    0x77
 */
 
